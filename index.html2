@@ -1,0 +1,106 @@
+// Task 1: If Statements - Customer Discounts
+let purchaseAmount = 120;
+if (purchaseAmount > 100) {
+  let discount = purchaseAmount * 0.1;
+  purchaseAmount -= discount;
+}
+console.log(`Final amount after discount: $${purchaseAmount}`);
+
+// Task 2: For Loop - Sales Report
+let sales = [120, 85, 200, 150, 90];
+let totalSales = 0;
+for (let sale of sales) {
+  totalSales += sale;
+}
+console.log(`Total Sales: $${totalSales}`);
+
+// Task 3: While Loop - Inventory Depletion
+let stock = 10;
+while (stock > 0) {
+  console.log(`Stock remaining: ${stock}`);
+  stock--;
+}
+
+// Task 4: Do...While Loop - Customer Survey
+let responses = 0;
+do {
+  responses++;
+  console.log(`Response count: ${responses}`);
+} while (responses < 3);
+
+// Task 5: For...In Loop - Employee Information
+let employee = { name: "Alice", position: "Manager", salary: 75000 };
+for (let key in employee) {
+  console.log(`${key}: ${employee[key]}`);
+}
+
+// Task 6: For...Of Loop - Product Listings
+let products = ["Laptop", "Mouse", "Keyboard"];
+for (let product of products) {
+  console.log(`Product: ${product}`);
+}
+
+// Task 7: forEach() Method - Order Processing
+let orders = [101, 102, 103];
+orders.forEach(order => console.log(`Order ID: ${order}`));
+
+// Task 8: Function Declaration - Tax Calculation
+function calculateTax(amount, taxRate) {
+  return amount * taxRate;
+}
+console.log(`Calculated Tax: $${calculateTax(100, 0.07)}`);
+
+// Task 9: Function Expressions - Discount Application
+const applyDiscount = function(price, discountPercentage) {
+  return price - (price * (discountPercentage / 100));
+};
+console.log(`Discounted Price: $${applyDiscount(200, 10)}`);
+
+// Task 10: Arrow Functions - Loyalty Points
+const calculatePoints = (purchaseAmount) => Math.floor(purchaseAmount / 10);
+console.log(`Loyalty Points Earned: ${calculatePoints(250)}`);
+
+// Task 1: Product Price Management
+let prices = [100, 200, 300, 400, 500];
+prices.push(600); // Add a new price
+prices.shift(); // Remove the first price
+console.log("Updated Prices:", prices);
+
+// Task 2: Modifying Customer Orders
+let ordersList = [10, 20, 30, 40, 50];
+ordersList[2] += 5; // Increase third order quantity by 5
+let totalOrdersCount = ordersList.reduce((sum, order) => sum + order, 0);
+console.log("Updated Orders:", ordersList);
+console.log("Total Order Count:", totalOrdersCount);
+
+// Task 3: Employee Performance Tracking
+let employeeData = {
+  name: "John Doe",
+  role: "Developer",
+  performanceScore: 85,
+  isActive: true,
+};
+employeeData.performanceScore = 90; // Update performance score
+employeeData.promotionEligible = true; // Add new property
+console.log("Updated Employee:", employeeData);
+
+// Task 4: Customer Feedback Records
+let feedbackList = [
+  { customerName: "Alice", feedbackText: "Great service!", rating: 5 },
+  { customerName: "Bob", feedbackText: "Good quality!", rating: 4 },
+  { customerName: "Charlie", feedbackText: "Fast delivery!", rating: 5 },
+];
+feedbackList.push({ customerName: "David", feedbackText: "Excellent support!", rating: 5 });
+console.log("Customer Feedback:", feedbackList);
+
+// Task 5: Inventory Management System
+let inventory = {
+  itemName: "Laptop",
+  stockCount: 50,
+  price: 1200,
+  calculateTotalValue: function () {
+    return this.stockCount * this.price;
+  },
+};
+console.log("Inventory Details:", inventory);
+console.log("Total Inventory Value:", inventory.calculateTotalValue());
